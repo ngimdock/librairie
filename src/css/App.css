@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&family=Revalia&family=Roboto:wght@100;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: gray;
+  position: relative;
+  z-index: -20;
+}
+
+:root {
+  --main-color: #5FBAA5;
+}
+
+#root{
+  position: relative;
+  z-index: -10;
+}
+
+
+/*Enter the site*/
+
+.enterSite{
+  background-image: url("../Images/enterSiteImg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -2;
+
+}
+
+.enterSite:before{
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.enterSite > div{
+  width: 75%;
+  height: 50%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*-------description----------*/
+.description{
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.enterSite .right{
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.readBook{
+  font-family: 'Qwigley', cursive;
+  color: var(--main-color);
+  font-size: 27px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.readBook:before{
+  content: "";
+  padding-left: 3px;
+  background: var(--main-color);
+  margin-right: 12px;
+}
+
+.description > h1{
+  font-family: 'Revalia', cursive;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+}
+
+.description h1 > span{
+  color: var(--main-color);
+}
+
+.description > p{
+  font-size: 19px;
+  line-height: 21px;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFDFD;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.register{
+  text-align: center !important;
+  color: var(--main-color);
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.register .icon{
+  color: white;
+  font-weight: 900;
+}
+
+/*--------------gauche de la description------------------*/
+
+.btn-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  left: 20%;
+}
+
+.btn{
+  text-decoration: none;
+  width: 130px;
+  padding: 12px 15px;
+  background: var(--main-color);
+  border-width: 0;
+  color: white;
+  font-size: 18px;
+  font-family: 'Roboto' sans-serif;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.btn:hover{
+  background: white;
+  color: var(--main-color);
+}
+
+
+
+.signup .formControl{
+  position: relative;
+  left: 15%;
+  width: 70%;
+  height: 100%;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.formControl .top{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signupOrLoginTitle{
+  font-family: 'Revalia', cursive;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 15px 0;
+}
+
+.connectInput{
+  width: 100%;
+  height: 35px;
+  padding: 3px;
+  border-radius: 12px;
+  color: gray;
+  font-style: italic;
+  outline: 0;
+  border: 1px solid var(--main-color);
+  margin: 6px 0;
+  padding-left: 8px;
+}
+
+.btnSignup, .btnLogin{
+  font-size: 14px;
+  padding: 8px 8px;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+
+input{
+  display: block;
+}
