@@ -18,6 +18,7 @@ const Login = () => {
 								<input type="text" placeholder="pseudo" id="pseudoId" required  className="connectInput"/>
 							<button className="btn btnLogin">Se connecter</button>
 						</div>
+						<div className="or"><span>ou</span></div>
 						<Link to="/signup" className="linkText">deja inscript? connectez vous</Link>
 					</form>
 				</div>

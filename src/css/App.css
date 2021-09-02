@@ -208,6 +208,34 @@ body{
   opacity: 0.8;
 }
 
+.or{
+  font-family: 'Qwigley', cursive;
+  color: var(--main-color);
+  font-size: 35px;
+  font-weight: 500;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.or span{
+  padding: 0 10px;
+}
+
+.or::before, .or::after{
+  content: "";
+  width: 120px;
+  background: gray;
+  height: 0.4px;
+  margin: auto 0;
+  opacity: 0.4;
+
+}
+
+
 
 input{
   display: block;

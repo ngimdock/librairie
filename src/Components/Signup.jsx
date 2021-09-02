@@ -20,7 +20,7 @@ const Signup = () => {
 							<button className="btn btnSignup">S'inscrire</button>
 						</div>
 
-						<span>Ou</span>
+						<div className="or"> <span>ou</span></div>
 
 						<div className="bottom">
 							Ici il faut mettre les autres modes de connexion 
