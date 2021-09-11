@@ -1,18 +1,29 @@
-import React from 'react'
-import * as Icon from 'react-bootstrap-icons';
+import React, { useEffect, useRef } from 'react'
 
 const Header = () => {
+
+	// references
+	const bottomBanner = useRef(null)
+
+	useEffect(() => {
+		console.log(bottomBanner.current)
+	}, [bottomBanner])
+
 	return (
 		<header className="siteHeader">
 			<div className="top">
 			     <div className="logoThemeContainer">
 					<p className="logo">LOGO</p>
-					<div className="in-on theme">theme</div>
+					<div className="in-on theme">
+						<div>aa</div>
+					</div>
 			     </div>
 
 			     <div>
 			     	<span className="userName">Danilix</span>
-			     	<div className="in-on logout">deconnexion</div>
+			     	<div className="in-on logout">
+			     		<div>aa</div>
+			     	</div>
 			     </div>
 			</div>
 
@@ -34,8 +45,8 @@ const Header = () => {
 
 			<nav className="bottom">
 				<ul className="navContainer">
-					<li>Accueil</li>
-					<li>Préférés</li>
+					<li ref={ bottomBanner }>Accueil</li>
+					<li ref={ bottomBanner }>Préférés</li>
 					<li>A propos</li>
 				</ul>
 			</nav>

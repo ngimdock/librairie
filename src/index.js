@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import FirebaseContext from './tools/context'
-import Firebase from './tools/firebaseConfig'
+import FirebaseClass from './tools/firebaseConfig'
 
 ReactDOM.render(
-  <FirebaseContext.Provider value={new Firebase()}>  
+  <FirebaseContext.Provider value={new FirebaseClass()}>  
     <App />                                           
   </FirebaseContext.Provider>,                        
 
