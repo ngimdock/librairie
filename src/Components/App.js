@@ -1,3 +1,4 @@
+
 import '../css/App.css';
 import {
   BrowserRouter as Router,
@@ -9,10 +10,11 @@ import Welcome from './Welcome';
 import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
+import PrivacyPolicy from './privacyPolicy';
+import TermsOfService from './termsOfService'
 import ErrorPage from './ErrorPage';
 
 function App() {
-
   return (
     <Router>
         <Switch>
@@ -26,6 +28,14 @@ function App() {
 
           <Route path="/home">
             <Home />
+          </Route>
+
+          <Route path="/privacypolicy">
+            <PrivacyPolicy />
+          </Route>
+
+          <Route path="/termsofservice">
+            <TermsOfService />
           </Route>
 
 

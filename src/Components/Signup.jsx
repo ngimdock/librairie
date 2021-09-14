@@ -1,15 +1,11 @@
 // import module
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom'
 // import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import FirebaseContext from '../tools/context'
-import firebase from 'firebase'
-import firebaseui from 'firebaseui'
-
 import Description from './Description';
 
-
-import 'firebaseui/dist/firebaseui.css'
+import FirebaseAuthProvider from '../tools/firebaseAuthProvider'
+import firebase from '../tools/firebaseConfig2'
 
 const Signup = () => {
 
@@ -26,7 +22,7 @@ const Signup = () => {
 	const [goHome, setGoHome] = useState(false)
 
 	//variables context
-	const firebaseobj  = useContext(FirebaseContext)
+	// const firebase  = useContext(FirebaseContext)
 
 	//handler
 	const handleChange = (event) => {
@@ -42,7 +38,7 @@ const Signup = () => {
 		const { email, password } = signupData
 
 		//create new user from firebase
-		firebaseobj.signupUser(email, password)
+		firebase.auth().createUserWithEmailAndPassword(email, password)
 		.then(user => {
 			setSignupData(resetSignupData)
 			setGoHome(true)
@@ -55,31 +51,12 @@ const Signup = () => {
 		})
 	}
 
-	// const uiConfig = {
-	//     signInFlow: "popup",
-	//     signInOptions: [
-	//       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-	//       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-	//       firebase.auth.EmailAuthProvider.PROVIDER_ID,
-	//     ],
-	//     callbacks: {
-	//       signInSuccess: () => false,
-	//     },
-	// };
-
-	// useEffect(() => {
-	// 	firebase.auth().onAuthStateChanged(user => {
-	// 		 setGoHome(!!user)
-	// 		 console.log(user)
-	// 	})
-	// }, [])
-
 
 	const {pseudo, email, password} = signupData
 
-
-
 	const disabled = pseudo === "" || email === "" || password.length < 6
+
+
 
 	return (
 		<div className="enterSite">
@@ -99,9 +76,8 @@ const Signup = () => {
 						</div>
 
 						<div className="or"> <span>ou</span></div>
-
-						<div className="bottom" id="firebaseui-auth-container">
-							je met les autres modes de connexion ici
+						<div>
+							<FirebaseAuthProvider goHome={goHome} setGoHome={setGoHome} />
 						</div>
 						<Link to="/login" className="linkText">deja inscript? connectez vous</Link>
 					</form>

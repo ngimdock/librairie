@@ -1,4 +1,5 @@
-
+import firebase from 'firebase';
+import "firebase/auth";
 
 const objConfig = {
   apiKey: "AIzaSyANJfxPgroCOGSTDUO8Ecu7c5RhIFoOM0c",
@@ -9,4 +10,6 @@ const objConfig = {
   appId: "1:880228657394:web:6c6cdaabd9c8356de9486b"
 };
 
-export default objConfig
+firebase.initializeApp(objConfig)
+
+export default firebase

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import FirebaseContext from '../tools/context'
 import { Link, Redirect } from 'react-router-dom'
+import firebase from '../tools/firebaseConfig2'
 
 import Description from './Description';
 
@@ -13,14 +13,13 @@ const Login = () => {
 		password: ""
 	}
 
+
 	// state variable
 	const [loginData, setLoginData] = useState(resetLoginData)
 	const [isSignedIn, setSignedIn] = useState(false)
 	const [error, setError] = useState(null)
 	const [goHome, setGoHome] = useState(false)
 
-	//context variable
-	const firebase = useContext(FirebaseContext)
 
 	// handle functions
 	const handleChange =(event) => {
@@ -36,7 +35,7 @@ const Login = () => {
 		const { email, password } = loginData
 
 		//login user rfrom firebase
-		firebase.loginUser(email, password)
+		firebase.auth().signInWithEmailAndPassword(email, password)
 		.then(user => {
 			setLoginData(resetLoginData)
 			setGoHome(true)

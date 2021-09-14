@@ -6,9 +6,9 @@ import FirebaseContext from './tools/context'
 import FirebaseClass from './tools/firebaseConfig'
 
 ReactDOM.render(
-  <FirebaseContext.Provider value={new FirebaseClass()}>  
-    <App />                                           
-  </FirebaseContext.Provider>,                        
+  // <FirebaseContext.Provider value={new FirebaseClass()}>  
+    <App />,                      
+  // </FirebaseContext.Provider>                     
 
   document.getElementById('root')
 );

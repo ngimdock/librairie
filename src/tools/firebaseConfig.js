@@ -1,26 +1,34 @@
-import app from 'firebase/app';
-import "firebase/auth";
-import objConfig from './objConfig'
+// import app from 'firebase/app';
+// import "firebase/auth";
 
-class FirebaseClass {
-  constructor(){
-    app.initializeApp(objConfig);
-    this.auth = app.auth();
-  }
+// const objConfig = {
+//   apiKey: "AIzaSyANJfxPgroCOGSTDUO8Ecu7c5RhIFoOM0c",
+//   authDomain: "librairie-ad3f9.firebaseapp.com",
+//   projectId: "librairie-ad3f9",
+//   storageBucket: "librairie-ad3f9.appspot.com",
+//   messagingSenderId: "880228657394",
+//   appId: "1:880228657394:web:6c6cdaabd9c8356de9486b"
+// };
 
-  // inscription
-  signupUser = (email, password) => 
-    this.auth.createUserWithEmailAndPassword(email, password);
+// class FirebaseClass {
+//   constructor(){
+//     app.initializeApp(objConfig);
+//     this.auth = app.auth();
+//   }
 
-  // Connexion
-  loginUser = (email, password) =>
-  this.auth.signInWithEmailAndPassword(email, password);
+//   // inscription
+//   signupUser = (email, password) => 
+//     this.auth.createUserWithEmailAndPassword(email, password);
 
-  // Deconnexion
-  signoutUser = () => this.auth.signOut();
+//   // Connexion
+//   loginUser = (email, password) =>
+//   this.auth.signInWithEmailAndPassword(email, password);
 
-  //Recuperer le mot de passe
-  passwordReset = (email) => this.auth.sendPasswordResetEmail(email);
-}
+//   // Deconnexion
+//   signoutUser = () => this.auth.signOut();
 
-export default FirebaseClass;
+//   //Recuperer le mot de passe
+//   passwordReset = (email) => this.auth.sendPasswordResetEmail(email);
+// }
+
+// export default FirebaseClass;
