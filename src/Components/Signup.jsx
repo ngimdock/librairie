@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom'
 // import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import Description from './Description';
+import { LoadingModal } from '../tools/customModal'
 
 import FirebaseAuthProvider from '../tools/firebaseAuthProvider'
 import firebase from '../tools/firebaseConfig2'

@@ -54,7 +54,7 @@ const Login = () => {
 
 	return (
 		<div className="enterSite">
-			<div className="signup">
+			<div className="login">
 				<Description /> 
 
 				<div className="right">
@@ -67,8 +67,10 @@ const Login = () => {
 							<button className="btnLogin" disabled={ disabled }>Se connecter</button>
 							<p className="errorMessage">{ error ? error.message : null }</p>
 						</div>
-						<div className="or"><span>ou</span></div>
-						<Link to="/signup" className="linkText">deja inscript? connectez vous</Link>
+						<div>
+							
+						</div>
+						<Link to="/signup" className="linkText">Pas de compte? c'est par ici!</Link>
 					</form>
 				</div>
 			</div>

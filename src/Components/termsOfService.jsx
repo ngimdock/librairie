@@ -3,7 +3,7 @@ import React from 'react'
 
 const TermsOfService = () => {
 	return (
-		<div>
+		<div className="enterSite">
 			TermsOfService...
 		</div>
 	)
