@@ -1,9 +1,16 @@
-import React from 'react';
+import { logDOM } from '@testing-library/react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Description from './Description'
 
-const Welcome = () => {
+import Description from './other/Description'
+
+const Welcome = (props) => {
+
+	useEffect(() => {
+		console.log("store");
+		console.log(props.store)
+	})
 	return (
 		<div className="enterSite">
 			<div className="welcome">

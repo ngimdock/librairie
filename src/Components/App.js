@@ -7,13 +7,13 @@ import {
 } from "react-router-dom";
 
 import Welcome from './Welcome';
-import Signup from './Signup';
-import Login from './Login';
-import Home from './Home';
-import ForgetPassword from './forgetPassword'
-import PrivacyPolicy from './privacyPolicy';
-import TermsOfService from './termsOfService'
-import ErrorPage from './ErrorPage';
+import Signup from './security/Signup';
+import Login from './security/Login';
+import Home from './home/Home';
+import ResetPassword from './security/resetPassword'
+import PrivacyPolicy from './engagement/privacyPolicy';
+import TermsOfService from './engagement/termsOfService'
+import ErrorPage from './other/ErrorPage';
 
 function App() {
   return (
@@ -31,8 +31,8 @@ function App() {
             <Home />
           </Route>
 
-          <Route path="/forgetpassword">
-            <ForgetPassword />
+          <Route path="/resetpassword">
+            <ResetPassword />
           </Route>
 
           <Route path="/privacypolicy">

@@ -29,7 +29,7 @@ body{
 /*Enter the site*/
 
 .enterSite{
-  background-image: url("../Images/enterSiteImg2.jpg");
+  background-image: url("../ressources/Images/enterSiteImg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -252,14 +252,20 @@ button:disabled, button[disabled]:hover{
   opacity: 0.4;
 }
 
-.errorMessage{
-  color: #E71E28;
+.errorMessage, .sucessResetText{
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
   margin: 4px auto;
   text-align: center;
 }
 
+.errorMessage{
+  color: #E71E28;
+}
+
+.sucessResetText{
+  color: #22dd33;
+}
 
 .linkText{
   text-align: right;
@@ -284,7 +290,7 @@ input{
 /*HEADER*/
 
 .siteHeader{
-  background-image: url("../Images/headerImg.jpg");
+  background-image: url("../ressources/Images/headerImg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 75vh;
