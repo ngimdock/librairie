@@ -6,7 +6,6 @@ const Header = () => {
 	const bottomBanner = useRef(null)
 
 	useEffect(() => {
-		console.log(bottomBanner.current)
 	}, [bottomBanner])
 
 	return (

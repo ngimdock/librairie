@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import firebase from '../../ressources/js/firebaseConfig2'
 
+import { ConfirmResetPasswordModal } from '../tools/customModal'
+
 import {
 	Link
 } from 'react-router-dom'
@@ -14,6 +16,7 @@ const ResetPassword = () => {
 	const [textValue, setTextValue] = useState("")
 	const [successReset, setSuccessReset] = useState("")
 	const [error, setError] = useState(null)
+	const [show, setShow] = useState(false)
 
 	//handler
 	const handleChange = (event) => {
@@ -27,15 +30,10 @@ const ResetPassword = () => {
 		setTextValue("")
 		firebase.auth().sendPasswordResetEmail(textValue)
 		.then(user => {
-			console.clear()
-			console.log("reenitialisation effectuer")
-			console.log(user)
-			setSuccessReset("un mail viens d'etre envoye, consultez votre boite mail")
+			setShow(true)
 			setError(null)
 		})
 		.catch(err => {
-			console.clear()
-			console.log(err)
 			setError(err)
 			setSuccessReset("")
 		})
@@ -69,6 +67,11 @@ const ResetPassword = () => {
 					</form>
 				</div>
 			</div>
+
+			<ConfirmResetPasswordModal 
+				show={show}
+				onHide={() => setShow(false)}
+			/>
 		</div>
 	)
 }

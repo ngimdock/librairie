@@ -44,8 +44,6 @@ const Signup = () => {
 			setSignupData(resetSignupData)
 			setGoHome(true)
 			setSignedIn(true)
-			console.log(isSignedIn)
-			console.log("connexion reussi")
 		})
 		.catch(err => {
 			setError(err)

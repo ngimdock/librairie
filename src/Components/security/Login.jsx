@@ -40,8 +40,6 @@ const Login = () => {
 			setLoginData(resetLoginData)
 			setGoHome(true)
 			setSignedIn(true)
-			console.log(isSignedIn)
-			console.log("login.... reussi")
 		})
 		.catch(error => {
 			setError(error)
